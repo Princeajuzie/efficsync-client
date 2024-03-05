@@ -2,21 +2,14 @@ import React from "react";
 
 export default function page() {
   return (
-
-    
     <main className="w-full max-w-md mx-auto p-6">
       <div className="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm">
         <div className="p-4 sm:p-7">
           <div className="text-center">
             <h1 className="block text-2xl font-bold text-gray-800">Sign up</h1>
             <p className="mt-2 text-sm text-gray-600">
-              Already have an account?
-              <a
-                className="text-blue-600 decoration-2 hover:underline font-medium"
-                href="../examples/html/signin.html"
-              >
-                Sign in here
-              </a>
+            Experience A Better Way To Manage Teams today using Efficysync 😜.
+          
             </p>
           </div>
           <div className="mt-5">
@@ -58,10 +51,7 @@ export default function page() {
               <div className="grid gap-y-4">
                 {/* Form Group */}
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm mb-2"
-                  >
+                  <label htmlFor="email" className="block text-sm mb-2">
                     Email address
                   </label>
                   <div className="relative">
@@ -86,19 +76,18 @@ export default function page() {
                       </svg>
                     </div>
                   </div>
-                  <
-    
-    p className="hidden text-xs text-red-600 mt-2" id="email-error">
-                    Please include a valid email address so we can get back to you
+                  <p
+                    className="hidden text-xs text-red-600 mt-2"
+                    id="email-error"
+                  >
+                    Please include a valid email address so we can get back to
+                    you
                   </p>
                 </div>
                 {/* End Form Group */}
                 {/* Form Group */}
                 <div>
-                  <label
-                    htmlFor="password"
-                    className="block text-sm mb-2"
-                  >
+                  <label htmlFor="password" className="block text-sm mb-2">
                     Password
                   </label>
                   <div className="relative">
@@ -132,7 +121,7 @@ export default function page() {
                 </div>
                 {/* End Form Group */}
                 {/* Form Group */}
-        
+
                 {/* End Form Group */}
                 {/* Checkbox */}
                 <div className="flex items-center">
@@ -145,10 +134,7 @@ export default function page() {
                     />
                   </div>
                   <div className="ms-3">
-                    <label
-                      htmlFor="remember-me"
-                      className="text-sm"
-                    >
+                    <label htmlFor="remember-me" className="text-sm">
                       I accept the{" "}
                       <a
                         className="text-blue-600 decoration-2 hover:underline font-medium"
@@ -166,6 +152,17 @@ export default function page() {
                 >
                   Sign up
                 </button>
+                <div className="text-center">
+                  <p className="mt-2 text-sm text-gray-600">
+                    Already have an account?
+                    <a
+                      className="text-blue-600 decoration-2 hover:underline font-medium"
+                      href="../examples/html/signin.html"
+                    >
+                      Sign in here
+                    </a>
+                  </p>
+                </div>
               </div>
             </form>
             {/* End Form */}
@@ -173,6 +170,5 @@ export default function page() {
         </div>
       </div>
     </main>
-
   );
 }
