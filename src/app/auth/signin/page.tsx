@@ -1,6 +1,5 @@
 import React from "react";
-// import BgAuth from "@/resources/images/bgauth.jpg";
-import Image from "next/image";
+
 export default function page() {
   return (
     <main className="flex items-center justify-center">
@@ -24,11 +23,11 @@ export default function page() {
           <div className="p-4 sm:p-7">
             <div className="text-center">
               <h1 className="block text-2xl font-bold text-gray-800">
-                Sign up
+                Sign in
               </h1>
               <p className="mt-2 text-sm text-gray-600">
-                Experience A Better Way To Manage Teams today using Efficysync
-                😜.
+               hey Welcome Back 👋
+             
               </p>
             </div>
             <div className="mt-5">
@@ -60,7 +59,7 @@ export default function page() {
                     fill="#EB4335"
                   />
                 </svg>
-                Sign up with Google
+                Sign in with Google
               </button>
               <div className="py-3 flex items-center text-xs text-gray-400 uppercase before:flex-[1_1_0%] before:border-t before:border-gray-200 before:me-6 after:flex-[1_1_0%] after:border-t after:border-gray-200 after:ms-6">
                 Or
@@ -78,7 +77,7 @@ export default function page() {
                         type="email"
                         id="email"
                         name="email"
-                        className="py-3 px-4 block w-full border-gray-200 border-[1px] rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                        className="py-3 px-4 block w-full border-[1px] border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                         required
                         aria-describedby="email-error"
                       />
@@ -106,15 +105,23 @@ export default function page() {
                   {/* End Form Group */}
                   {/* Form Group */}
                   <div>
-                    <label htmlFor="password" className="block text-sm mb-2">
-                      Password
-                    </label>
+                    <div className="flex justify-between items-center">
+                      <label htmlFor="password" className="block text-sm mb-2">
+                        Password
+                      </label>
+                      <a
+                        className="text-sm text-blue-600 decoration-2 hover:underline font-medium"
+                        href="../examples/html/recover-account.html"
+                      >
+                        Forgot password?
+                      </a>
+                    </div>
                     <div className="relative">
                       <input
                         type="password"
                         id="password"
                         name="password"
-                        className="py-3 px-4 block w-full border-gray-200  border-[1px] rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                        className="py-3 border-[1px] px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                         required
                         aria-describedby="password-error"
                       />
@@ -139,9 +146,6 @@ export default function page() {
                     </p>
                   </div>
                   {/* End Form Group */}
-                  {/* Form Group */}
-
-                  {/* End Form Group */}
                   {/* Checkbox */}
                   <div className="flex items-center">
                     <div className="flex">
@@ -149,18 +153,12 @@ export default function page() {
                         id="remember-me"
                         name="remember-me"
                         type="checkbox"
-                        className="shrink-0 mt-0.5 border-gray-200   rounded text-blue-600 pointer-events-none focus:ring-blue-500"
+                        className="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 pointer-events-none focus:ring-blue-500"
                       />
                     </div>
                     <div className="ms-3">
                       <label htmlFor="remember-me" className="text-sm">
-                        I accept the{" "}
-                        <a
-                          className="text-blue-600 decoration-2 hover:underline font-medium"
-                          href="#"
-                        >
-                          Terms and Conditions
-                        </a>
+                        Remember me
                       </label>
                     </div>
                   </div>
@@ -169,19 +167,17 @@ export default function page() {
                     type="submit"
                     className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
                   >
-                    Sign up
+                    Sign in
                   </button>
-                  <div className="text-center">
-                    <p className="mt-2 text-sm text-gray-600">
-                      Already have an account?
-                      <a
-                        className="text-blue-600 decoration-2 hover:underline font-medium"
-                        href="../examples/html/signin.html"
-                      >
-                        Sign in here
-                      </a>
-                    </p>
-                  </div>
+                  <p className="mt-2 text-sm text-gray-600 text-center">
+                    Dont have an account yet?
+                    <a
+                      className="text-blue-600 decoration-2 hover:underline font-medium"
+                      href="../examples/html/signup.html"
+                    >
+                      Sign up here
+                    </a>
+                  </p>
                 </div>
               </form>
               {/* End Form */}
