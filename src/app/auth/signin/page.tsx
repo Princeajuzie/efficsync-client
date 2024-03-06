@@ -1,4 +1,5 @@
 import React from "react";
+import Bg from "@/resources/images/bgauth.jpg"
 import Link from "next/link";
 export default function page() {
   return (
@@ -6,7 +7,7 @@ export default function page() {
       <section
         className="backdrop-blur-3xl"
         style={{
-          backgroundImage: `url(/Bgauth.jpg)`, // Set background image
+          backgroundImage: `url(/bgauth.jpg)`, // Set background image
           backgroundSize: "cover", // Make the background image cover the entire element
           backgroundPosition: "center",
           position: "fixed", // Center the background image
