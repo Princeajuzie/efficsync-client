@@ -1,5 +1,5 @@
 import React from "react";
-import Bg from "@/resources/images/bgauth.jpg"
+import Bg from "@/resources/images/bgauth.jpg";
 import Link from "next/link";
 export default function page() {
   return (
@@ -26,10 +26,7 @@ export default function page() {
               <h1 className="block text-2xl font-bold text-gray-800">
                 Sign in
               </h1>
-              <p className="mt-2 text-sm text-gray-600">
-               hey Welcome Back 👋
-             
-              </p>
+              <p className="mt-2 text-sm text-gray-600">hey Welcome Back 👋</p>
             </div>
             <div className="mt-5">
               <button
@@ -154,7 +151,6 @@ export default function page() {
                         id="remember-me"
                         name="remember-me"
                         type="checkbox"
-                        className="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 pointer-events-none focus:ring-blue-500"
                       />
                     </div>
                     <div className="ms-3">

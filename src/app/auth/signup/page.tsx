@@ -6,7 +6,7 @@ export default function page() {
       <section
         className="backdrop-blur-3xl"
         style={{
-            backgroundImage: `url(/bgauth.jpg)`, // Set background image
+          backgroundImage: `url(/bgauth.jpg)`, // Set background image
           backgroundSize: "cover", // Make the background image cover the entire element
           backgroundPosition: "center",
           position: "fixed", // Center the background image
@@ -148,7 +148,6 @@ export default function page() {
                         id="remember-me"
                         name="remember-me"
                         type="checkbox"
-                        className="shrink-0 mt-0.5 border-gray-200   rounded text-blue-600 pointer-events-none focus:ring-blue-500"
                       />
                     </div>
                     <div className="ms-3">
