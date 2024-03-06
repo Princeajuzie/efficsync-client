@@ -1,16 +1,148 @@
-import React from 'react'
+import React from "react";
 import Logo from "@/resources/svg/logo.svg";
 import Image from "next/image";
-export  function Sidebar() {
+export function Sidebar() {
+  const sidebarItem = [
+    {
+      name: "Dashboard",
+      icon: (
+        <svg
+          className="flex-shrink-0 size-4"
+          xmlns="http://www.w3.org/2000/svg"
+          width={26}
+          height={26}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+      ),
+    },
+    {
+      name: "Tasks",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          width={26}
+          height={26}
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className=" flex-shrink-0 size-4"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          />
+        </svg>
+      ),
+    },
+    {
+      name: "Chats",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          width={26}
+          height={26}
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className=" flex-shrink-0 size-4"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 0 1-.923 1.785A5.969 5.969 0 0 0 6 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337Z"
+          />
+        </svg>
+      ),
+    },
+    {
+      name: "Teamspaces",
+      icon: (
+        <svg
+        width={26}
+        height={26}
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className=" flex-shrink-0 size-4"
+   
+      >
+        <g
+          clipPath="url(#clip0_16371_118949)"
+          stroke="currentColor"
+          strokeWidth={1.5}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M3.752 12.898a6.5 6.5 0 119.075-9.24M14.377 7.725a6.5 6.5 0 01-6.746 6.647" />
+          <path d="M2.097 10.848C.808 12.858.308 14.477.936 15.105c1.087 1.088 5.141-1.204 9.055-5.118C13.905 6.074 16.2 2.02 15.11.933c-.626-.626-2.252-.114-4.251 1.163" />
+        </g>
+        <defs>
+          <clipPath id="clip0_16371_118949">
+            <path fill="#fff" d="M0 0H16V16H0z" />
+          </clipPath>
+        </defs>
+      </svg>
+      )
+    },
+    {
+      name: "Notes",
+      icon: (
+        <svg
+        width={26}
+        height={26}
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className=" flex-shrink-0 size-4"
+      
+      >
+        <g
+          stroke="#000"
+          strokeWidth={1.5}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M16 3.99H8a4 4 0 00-4 4v10a4 4 0 004 4h8a4 4 0 004-4v-10a4 4 0 00-4-4zM9 2v5M15 2v5M8 16h6M8 12h8" />
+        </g>
+      </svg>
+      )
+    },
+    {
+      name: "Workflows",
+      icon: (
+        <svg
+        width={26}
+        height={26}
+      viewBox="0 0 1024 1024"
+      className=" flex-shrink-0 size-4"
+      xmlns="http://www.w3.org/2000/svg"
+     
+    >
+      <path d="M786.359 809.326a88.357 88.357 0 01176.567 0 88.283 88.283 0 01-176.567 0zM511.56 898.56c-48.64 0-88.21-39.497-88.21-88.064a88.21 88.21 0 01176.42 0c0 48.567-39.57 88.064-88.21 88.064zm.951-839.022c48.567 0 88.137 39.497 88.137 87.918a88.137 88.137 0 01-176.201 0c0-48.494 39.497-87.918 88.064-87.918zM145.335 896.731c-48.64 0-88.21-39.497-88.21-88.137a88.283 88.283 0 01176.493 0c0 48.64-39.643 88.137-88.283 88.137zm759.735-471.04a29.55 29.55 0 00-8.265-20.48 30.793 30.793 0 00-20.48-8.265H541.257V291.182a147.31 147.31 0 00117.906-144.238 147.163 147.163 0 00-294.253 0c0 71.826 49.883 131.51 118.125 144.238-.146.365-1.974 105.691-1.974 105.691H147.675a28.453 28.453 0 00-20.48 8.265 30.135 30.135 0 00-8.923 20.48l.658 241.591C59.685 676.718.585 737.865.585 810.935c0 81.042 65.975 147.017 147.09 147.017 81.189 0 147.164-65.975 147.164-147.017 0-70.656-53.102-131.438-112.128-143.726V464.97h300.324v191.488c0 3.73.878 7.095 2.048 10.24A147.017 147.017 0 00364.91 810.935a147.237 147.237 0 00294.253 0c0-71.9-52.077-131.657-120.539-144.238a29.11 29.11 0 001.975-10.24V464.97h300.617v202.24c-64.366 14.117-112.055 73.143-112.055 143.726a147.237 147.237 0 00294.254 0c0-72.997-57.344-134.656-118.345-144.53.365-1.098 0-240.787 0-240.787z" />
+    </svg>
+      )
+    }
+  ];
   return (
-<>
-  {/* Sidebar */}
-  <div
-    id="application-sidebar"
-    className="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform hidden fixed top-0 start-0 bottom-0 z-[60] w-64 bg-white border-e border-gray-200 pt-7 pb-10 overflow-y-auto lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300  "
-  >
-    <div className="px-6 ">
-    <div className=" h-fit bg-black rounded-md items-start w-10  ">
+    <>
+      {/* Sidebar */}
+      <div
+        id="application-sidebar"
+        className="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform hidden fixed top-0 start-0 bottom-0 z-[60] w-64 bg-white border-e border-gray-200 pt-7 pb-10 overflow-y-auto lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300  "
+      >
+        <div className="px-6 ">
+          <div className=" h-fit bg-black rounded-md items-start w-10  ">
             <Image
               src={Logo}
               alt="logo"
@@ -20,495 +152,31 @@ export  function Sidebar() {
               className="h-auto w-[40px]  "
             />
           </div>
-    </div>
-    <nav
-      className="hs-accordion-group p-6 w-full flex flex-col flex-wrap"
-      data-hs-accordion-always-open=""
-    >
-      <ul className="space-y-1.5">
-        <li>
-          <a
-            className="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-900 dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="#"
-          >
-            <svg
-              className="flex-shrink-0 size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-            Dashboard
-          </a>
-        </li>
-        <li className="hs-accordion" id="users-accordion">
-          <button
-            type="button"
-            className="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-          >
-            <svg
-              className="flex-shrink-0 size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-              <circle cx={9} cy={7} r={4} />
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-            </svg>
-            Users
-            <svg
-              className="hs-accordion-active:block ms-auto hidden size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="m18 15-6-6-6 6" />
-            </svg>
-            <svg
-              className="hs-accordion-active:hidden ms-auto block size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="m6 9 6 6 6-6" />
-            </svg>
-          </button>
-          <div
-            id="users-accordion-child"
-            className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
-          >
-            <ul
-              className="hs-accordion-group ps-3 pt-2"
-              data-hs-accordion-always-open=""
-            >
-              <li className="hs-accordion" id="users-accordion-sub-1">
-                <button
-                  type="button"
-                  className="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                >
-                  Sub Menu 1
-                  <svg
-                    className="hs-accordion-active:block ms-auto hidden size-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={24}
-                    height={24}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+        </div>
+        <nav
+          className="hs-accordion-group p-6 w-full flex flex-col flex-wrap"
+          data-hs-accordion-always-open=""
+        >
+          <ul className="space-y-1.5">
+            {sidebarItem.map((item) => {
+              return (
+                <li key={item.name}>
+                  <a
+                    className="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-lg hover:bg-gray-100"
+                    href="#"
                   >
-                    <path d="m18 15-6-6-6 6" />
-                  </svg>
-                  <svg
-                    className="hs-accordion-active:hidden ms-auto block size-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={24}
-                    height={24}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="m6 9 6 6 6-6" />
-                  </svg>
-                </button>
-                <div
-                  id="users-accordion-sub-1-child"
-                  className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
-                >
-                  <ul className="pt-2 ps-2">
-                    <li>
-                      <a
-                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                        href="#"
-                      >
-                        Link 1
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                        href="#"
-                      >
-                        Link 2
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                        href="#"
-                      >
-                        Link 3
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li className="hs-accordion" id="users-accordion-sub-2">
-                <button
-                  type="button"
-                  className="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                >
-                  Sub Menu 2
-                  <svg
-                    className="hs-accordion-active:block ms-auto hidden size-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={24}
-                    height={24}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="m18 15-6-6-6 6" />
-                  </svg>
-                  <svg
-                    className="hs-accordion-active:hidden ms-auto block size-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={24}
-                    height={24}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="m6 9 6 6 6-6" />
-                  </svg>
-                </button>
-                <div
-                  id="users-accordion-sub-2-child"
-                  className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden ps-2"
-                >
-                  <ul className="pt-2 ps-2">
-                    <li>
-                      <a
-                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                        href="#"
-                      >
-                        Link 1
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                        href="#"
-                      >
-                        Link 2
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                        href="#"
-                      >
-                        Link 3
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li className="hs-accordion" id="account-accordion">
-          <button
-            type="button"
-            className="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-          >
-            <svg
-              className="flex-shrink-0 mt-0.5 size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <circle cx={18} cy={15} r={3} />
-              <circle cx={9} cy={7} r={4} />
-              <path d="M10 15H6a4 4 0 0 0-4 4v2" />
-              <path d="m21.7 16.4-.9-.3" />
-              <path d="m15.2 13.9-.9-.3" />
-              <path d="m16.6 18.7.3-.9" />
-              <path d="m19.1 12.2.3-.9" />
-              <path d="m19.6 18.7-.4-1" />
-              <path d="m16.8 12.3-.4-1" />
-              <path d="m14.3 16.6 1-.4" />
-              <path d="m20.7 13.8 1-.4" />
-            </svg>
-            Account
-            <svg
-              className="hs-accordion-active:block ms-auto hidden size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="m18 15-6-6-6 6" />
-            </svg>
-            <svg
-              className="hs-accordion-active:hidden ms-auto block size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="m6 9 6 6 6-6" />
-            </svg>
-          </button>
-          <div
-            id="account-accordion-child"
-            className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
-          >
-            <ul className="pt-2 ps-2">
-              <li>
-                <a
-                  className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                  href="#"
-                >
-                  Link 1
-                </a>
-              </li>
-              <li>
-                <a
-                  className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                  href="#"
-                >
-                  Link 2
-                </a>
-              </li>
-              <li>
-                <a
-                  className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                  href="#"
-                >
-                  Link 3
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li className="hs-accordion" id="projects-accordion">
-          <button
-            type="button"
-            className="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-          >
-            <svg
-              className="flex-shrink-0 size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <rect width={20} height={14} x={2} y={7} rx={2} ry={2} />
-              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-            </svg>
-            Projects
-            <svg
-              className="hs-accordion-active:block ms-auto hidden size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="m18 15-6-6-6 6" />
-            </svg>
-            <svg
-              className="hs-accordion-active:hidden ms-auto block size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="m6 9 6 6 6-6" />
-            </svg>
-          </button>
-          <div
-            id="projects-accordion-child"
-            className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
-          >
-            <ul className="pt-2 ps-2">
-              <li>
-                <a
-                  className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                  href="#"
-                >
-                  Link 1
-                </a>
-              </li>
-              <li>
-                <a
-                  className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                  href="#"
-                >
-                  Link 2
-                </a>
-              </li>
-              <li>
-                <a
-                  className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                  href="#"
-                >
-                  Link 3
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li className="hs-accordion" id="settings-accordion">
-          <button
-            type="button"
-            className="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-          >
-            <svg
-              className="flex-shrink-0 mt-0.5 size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <circle cx={12} cy={12} r={3} />
-              <path d="M19.4 7.6a9 9 0 0 1-2.8 5.4l-.6.5-2.2 2.2a9 9 0 0 1-5.4 2.8A9 9 0 0 1 4 12a9 9 0 0 1 2.8-5.4l.5-.6L9.6 4.4a9 9 0 0 1 5.4-2.8A9 9 0 0 1 20 12a9 9 0 0 1-2.6 6.4" />
-              <line x1={12} y1={17} x2="12.01" y2={17} />
-            </svg>
-            Settings
-            <svg
-              className="hs-accordion-active:block ms-auto hidden size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="m18 15-6-6-6 6" />
-            </svg>
-            <svg
-              className="hs-accordion-active:hidden ms-auto block size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="m6 9 6 6 6-6" />
-            </svg>
-          </button>
-          <div
-            id="settings-accordion-child"
-            className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
-          >
-            <ul className="pt-2 ps-2">
-              <li>
-                <a
-                  className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                  href="#"
-                >
-                  Link 1
-                </a>
-              </li>
-              <li>
-                <a
-                  className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                  href="#"
-                >
-                  Link 2
-                </a>
-              </li>
-              <li>
-                <a
-                  className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                  href="#"
-                >
-                  Link 3
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  {/* End Sidebar */}
-</>
-
-  )
+                    {item.icon}
+                    {item.name}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </div>
+      {/* End Sidebar */}
+    </>
+  );
 }
 
-export default Sidebar
+export default Sidebar;
