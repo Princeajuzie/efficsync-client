@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 export default function page() {
   return (
     <main className="flex items-center justify-center">
@@ -116,12 +116,12 @@ export default function page() {
                   </button>
                   <p className="mt-2 text-sm text-gray-600 text-center">
                     Remeber your password?
-                    <a
+                    <Link
                       className="text-blue-600 decoration-2 hover:underline font-medium"
-                      href="../examples/html/signup.html"
+                      href="/auth/signin"
                     >
                       Login here
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </form>

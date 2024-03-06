@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 export default function page() {
   return (
     <main className="flex items-center justify-center">
@@ -109,12 +109,12 @@ export default function page() {
                       <label htmlFor="password" className="block text-sm mb-2">
                         Password
                       </label>
-                      <a
+                      <Link
                         className="text-sm text-blue-600 decoration-2 hover:underline font-medium"
-                        href="../examples/html/recover-account.html"
+                        href="forgotpassword"
                       >
                         Forgot password?
-                      </a>
+                      </Link>
                     </div>
                     <div className="relative">
                       <input
@@ -169,15 +169,15 @@ export default function page() {
                   >
                     Sign in
                   </button>
-                  <p className="mt-2 text-sm text-gray-600 text-center">
+                  <div className="mt-2 text-sm text-gray-600 text-center">
                     Dont have an account yet?
-                    <a
+                    <Link
                       className="text-blue-600 decoration-2 hover:underline font-medium"
-                      href="../examples/html/signup.html"
+                      href="/auth/signup"
                     >
                       Sign up here
-                    </a>
-                  </p>
+                    </Link>
+                  </div>
                 </div>
               </form>
               {/* End Form */}
