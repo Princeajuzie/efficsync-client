@@ -16,7 +16,7 @@ export default function page() {
           left: 0,
           zIndex: -1,
           width: "100vw",
-          filter: "blur(15px)", // Apply blur effect
+          filter: "blur(8px)", // Apply blur effect
         }}
       ></section>
       <div className="w-full max-w-md m-auto p-4  h-screen flex flex-col justify-center">
