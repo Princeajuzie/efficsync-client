@@ -9,3 +9,24 @@
   /* font-family: 'Poppins', sans-serif; */
   background-color: transparent;
 }
+
+
+::-webkit-scrollbar {
+  margin-top: 2px;
+  width: 6px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #817c7c9a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #817c7c9a;
+  width: 4px;
+}

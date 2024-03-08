@@ -1,9 +1,7 @@
 import React from "react";
-import Logo from "@/resources/svg/logo.svg";
-import Image from "next/image";
-import Link from "next/link";
-export function Sidebar() {
-  const sidebarItem = [
+
+export function BottomNav() {
+  const bottomItem = [
     {
       name: "Dashboard",
       icon: (
@@ -154,96 +152,34 @@ export function Sidebar() {
       ),
     },
   ];
+
   return (
- 
-      <div
-        id="application-sidebar"
-        className="    lg:w-96 w-24  border-r-2 absolute hidden lg:block lg:sticky top-0 z-40 lg:z-0 h-screen     border-gray-200      "
-      >
-        <nav
-          className="hs-accordion-group p-6 w-full flex  h-screen justify-between overflow-auto    lg:bottom-0 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300   flex-col "
-          data-hs-accordion-always-open=""
-        >
-          <div className="pb-4 ">
-            <div className=" h-fit bg-black rounded-md items-start w-10  ">
-              <Image
-                src={Logo}
-                alt="logo"
-                width={200}
-                height={200}
-                draggable={false}
-                className="h-auto w-[40px]  "
-              />
-            </div>
-          </div>
-          <ul className="space-y-1.5">
-            {sidebarItem.map((item) => {
-              return (
-                <li key={item.name}>
-                  <a
-                    className="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-lg hover:bg-gray-100"
-                    href="#"
-                  >
-                    {item.icon}
-                    {item.name}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-          <div className=" items-start mt-3 ">
-            <div className="">
-              <div className="mx-auto py-4 px-4 mt-4 rounded-lg shadow-xl sm:w-full sm:mx-auto bg-gradient-to-br from-blue-600 to-purple-600">
-              
+    <div>
+      <div className="px-7 bg-white shadow-lg rounded-2xl lg:hidden block   top-[475px] w-full  ">
+        <div className="flex">
+          {bottomItem.map((item, idx) => {
+            return (
+              <div className="flex-1 items-center  text-center group" key={idx}>
+                <a
+                  href="#"
+                  className="flex  items-center justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-indigo-500"
+                >
+                  <span className="flex flex-col items-center px-1 pt-1 pb-1  text-center">
+                    <div className="far fa-home text-2xl pt-1 mb-1 block items-center text-center">
+                      {item.icon}
+                    </div>
 
-                <span className="text-white text-sm mb-2 w-full text-center">
-                  Unlimited collaboration
-                </span>
-                <Link
-                  href="/pricing"
-                  className="block mt-4 px-8 py-2 text-sm font-semibold text-center text-white transition duration-100 bg-white rounded-lg outline-none bg-opacity-20 hover:bg-opacity-30 md:text-sm"
-                >
-                  Go Pro ⚡
-                </Link>
+                    <span className="block text-xs pb-2 text-center">{item.name}</span>
+                    <span className="block w-5 mx-auto h-1 group-hover:bg-indigo-500 rounded-full" />
+                  </span>
+                </a>
               </div>
-            </div>
-
-            <div className="flex items-center justify-between mt-3 gap-3 ">
-              <div className="flex items-center">
-                <button
-                  id="hs-dropdown-with-header"
-                  type="button"
-                  className="w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
-                >
-                  <img
-                    className="inline-block size-[30px] rounded-full ring-2 ring-white"
-                    src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                    alt="Image Description"
-                  />
-                </button>
-                <span className="inline-block min-w-0 truncate pl-[5px] text-ay-p1 text-sm font-bold text-dark sm:text-ay-p2 w-32">
-                  Prince Organization
-                </span>
-              </div>
-              <div>
-                <svg
-                  fill="#000"
-                  width="24px"
-                  height="24px"
-                  viewBox="0 0 64 64"
-                  data-name="Layer 1"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M24.76 28.1A10.35 10.35 0 1135.1 17.75 10.36 10.36 0 0124.76 28.1zm0-16.69a6.35 6.35 0 106.34 6.34 6.35 6.35 0 00-6.34-6.34zM24.76 56.59a28.11 28.11 0 01-16.4-5.22 2 2 0 01-.83-1.43v-.82a17.26 17.26 0 1134.51 0 7.31 7.31 0 010 .81 2 2 0 01-.83 1.44c-.68.48-1.39.94-2.1 1.36a2 2 0 11-2-3.45c.33-.2.66-.4 1-.61a13.25 13.25 0 00-26.49 0 24.13 24.13 0 0013.25 3.92 24.87 24.87 0 003.67-.27 2 2 0 01.61 4 27.84 27.84 0 01-4.39.27zM47.85 30.54a2 2 0 01-2-2v-13.3a2 2 0 014 0v13.3a2 2 0 01-2 2z" />
-                  <path d="M54.5 23.89H41.2a2 2 0 010-4h13.3a2 2 0 010 4z" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </nav>
+            );
+          })}
+        </div>
       </div>
-
+    </div>
   );
 }
 
-export default Sidebar;
+export default BottomNav;
