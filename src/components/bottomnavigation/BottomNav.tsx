@@ -13,7 +13,7 @@ export function BottomNav() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className=" flex-shrink-0 size-5"
+          className=" flex-shrink-0 size-6 "
         >
           <path
             strokeLinecap="round"
@@ -34,7 +34,7 @@ export function BottomNav() {
           height={26}
           strokeWidth={1.5}
           stroke="currentColor"
-          className=" flex-shrink-0 size-5"
+          className=" flex-shrink-0 size-6 "
         >
           <path
             strokeLinecap="round"
@@ -55,7 +55,7 @@ export function BottomNav() {
           height={26}
           strokeWidth={1.5}
           stroke="currentColor"
-          className=" flex-shrink-0 size-5"
+          className=" flex-shrink-0 size-6 "
         >
           <path
             strokeLinecap="round"
@@ -95,76 +95,40 @@ export function BottomNav() {
       ),
     },
     {
-      name: "Notes",
+      name: "more",
       icon: (
         <svg
-          width={26}
+        width={26}
           height={26}
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className=" flex-shrink-0 size-5"
-        >
-          <g
-            stroke="#000"
-            strokeWidth={1.5}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M16 3.99H8a4 4 0 00-4 4v10a4 4 0 004 4h8a4 4 0 004-4v-10a4 4 0 00-4-4zM9 2v5M15 2v5M8 16h6M8 12h8" />
-          </g>
-        </svg>
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className=" flex-shrink-0 size-6 "
+       
+      >
+        <g fill="#000">
+          <circle cx={18} cy={12} r={1.5} transform="rotate(90 18 12)" />
+          <circle cx={12} cy={12} r={1.5} transform="rotate(90 12 12)" />
+          <circle cx={6} cy={12} r={1.5} transform="rotate(90 6 12)" />
+        </g>
+      </svg>
       ),
     },
-    {
-      name: "Workflows",
-      icon: (
-        <svg
-          width={26}
-          height={26}
-          viewBox="0 0 1024 1024"
-          className=" flex-shrink-0 size-5"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M786.359 809.326a88.357 88.357 0 01176.567 0 88.283 88.283 0 01-176.567 0zM511.56 898.56c-48.64 0-88.21-39.497-88.21-88.064a88.21 88.21 0 01176.42 0c0 48.567-39.57 88.064-88.21 88.064zm.951-839.022c48.567 0 88.137 39.497 88.137 87.918a88.137 88.137 0 01-176.201 0c0-48.494 39.497-87.918 88.064-87.918zM145.335 896.731c-48.64 0-88.21-39.497-88.21-88.137a88.283 88.283 0 01176.493 0c0 48.64-39.643 88.137-88.283 88.137zm759.735-471.04a29.55 29.55 0 00-8.265-20.48 30.793 30.793 0 00-20.48-8.265H541.257V291.182a147.31 147.31 0 00117.906-144.238 147.163 147.163 0 00-294.253 0c0 71.826 49.883 131.51 118.125 144.238-.146.365-1.974 105.691-1.974 105.691H147.675a28.453 28.453 0 00-20.48 8.265 30.135 30.135 0 00-8.923 20.48l.658 241.591C59.685 676.718.585 737.865.585 810.935c0 81.042 65.975 147.017 147.09 147.017 81.189 0 147.164-65.975 147.164-147.017 0-70.656-53.102-131.438-112.128-143.726V464.97h300.324v191.488c0 3.73.878 7.095 2.048 10.24A147.017 147.017 0 00364.91 810.935a147.237 147.237 0 00294.253 0c0-71.9-52.077-131.657-120.539-144.238a29.11 29.11 0 001.975-10.24V464.97h300.617v202.24c-64.366 14.117-112.055 73.143-112.055 143.726a147.237 147.237 0 00294.254 0c0-72.997-57.344-134.656-118.345-144.53.365-1.098 0-240.787 0-240.787z" />
-        </svg>
-      ),
-    },
-    {
-      name: "Rhythms",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width={26}
-          height={26}
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          className=" flex-shrink-0 size-5"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
-          />
-        </svg>
-      ),
-    },
+
   ];
 
   return (
     <div>
-      <div className="px-7 bg-white shadow-lg rounded-2xl lg:hidden block   top-[475px] w-full  ">
-        <div className="flex">
+      <div className="px-7 bg-white shadow-lg  lg:hidden block   top-[475px] w-full  ">
+        <div className="flex items-center justify-center">
           {bottomItem.map((item, idx) => {
             return (
-              <div className="flex-1 items-center  text-center group" key={idx}>
+              <div className="flex-1 items-center  text-center group justify-center" key={idx}>
                 <a
                   href="#"
                   className="flex  items-center justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-indigo-500"
                 >
-                  <span className="flex flex-col items-center px-1 pt-1 pb-1  text-center">
+                  <span className="flex flex-col items-center px-1 pt-1 pb-1  text-center text-black justify-center">
                     <div className="far fa-home text-2xl pt-1 mb-1 block items-center text-center">
                       {item.icon}
                     </div>
