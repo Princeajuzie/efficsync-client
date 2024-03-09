@@ -1,6 +1,7 @@
+"use client"
 import React from "react";
-
-
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 export function BottomNav() {
   const bottomItem = [
     {
@@ -116,6 +117,8 @@ export function BottomNav() {
     },
   ];
 
+  const pathname = usePathname();
+
   return (
     <div>
       {/* <div className=" bg-white shadow-lg  lg:hidden block   w-full   px-12 ">
@@ -152,13 +155,13 @@ export function BottomNav() {
             {bottomItem.map((item,idx)=>{
                 return (
 
-          <a
-            className="justify-center inline-block w-full pt-2 pb-1 text-center focus:text-royal hover:text-royal hover:bg-white text-black   bg-white"
-            href="/app"
+          <Link
+            className={`justify-center inline-block w-full pt-2 pb-1 text-center focus:text-royal hover:text-royal hover:bg-white text-black   bg-white ${pathname === `/${item.name.toLocaleLowerCase()}` ? "text-red-600" : "text-black"}`}
+            href={ item.name === "more" ? "" : `/${item.name.toLocaleLowerCase()}` }
           key={idx}>
            {item.icon}
             <span className="block text-xs text-black tab">{item.name}</span>
-          </a>
+          </Link>
                 )
             })}
          
