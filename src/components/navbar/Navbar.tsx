@@ -3,7 +3,7 @@ import Logo from "@/resources/svg/logo.svg";
 import Image from "next/image";
 export function Navbar() {
   return (
-    <header className="   top-0 inset-x-0 flex flex-wrap lg:h-[66px] h-18 sm:justify-start sm:flex-nowrap z-[48] w-full bg-white border-b text-sm py-2.5 sm:py-6 ">
+    <header className="   top-0 inset-x-0 flex flex-wrap lg:h-auto h-18 sm:justify-start sm:flex-nowrap z-[48] w-full bg-white border-b text-sm lg:py-3 py-2.5 sm:py-6 ">
       <nav
         className="flex basis-full items-center w-full mx-auto px-4 sm:px-6 md:px-8"
         aria-label="Global"
@@ -56,7 +56,7 @@ export function Navbar() {
               className="w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
             >
               <svg
-                className="flex-shrink-0 size-6"
+                className="flex-shrink-0 lg:size-4 size-6"
                 xmlns="http://www.w3.org/2000/svg"
                 width={24}
                 height={24}
@@ -77,7 +77,7 @@ export function Navbar() {
               data-hs-offcanvas="#hs-offcanvas-right"
             >
               <svg
-                className="flex-shrink-0 size-6"
+                className="flex-shrink-0 lg:size-4 size-6"
                 xmlns="http://www.w3.org/2000/svg"
                 width={24}
                 height={24}
