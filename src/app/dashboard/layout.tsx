@@ -8,7 +8,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
 
         <div className="">
           <Navbar />
-          <div className=" bg-red-600 w-[100%] flex flex-col  lg:overflow-y-auto lg:h-[auto] h-[calc(100svh-135px)] overflow-y-auto ">
+          <div className=" bg-red-600 w-[100%] flex flex-col  lg:overflow-y-auto lg:h-[auto] h-[calc(100svh-136px)] overflow-y-auto ">
             {children}
           </div>
           <div className="z-20">
