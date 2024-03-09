@@ -56,7 +56,7 @@ export function Navbar() {
               className="w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
             >
               <svg
-                className="flex-shrink-0 size-4"
+                className="flex-shrink-0 size-6"
                 xmlns="http://www.w3.org/2000/svg"
                 width={24}
                 height={24}
@@ -73,7 +73,7 @@ export function Navbar() {
             </button>
             <button
               type="button"
-              className="w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
+              className="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
               data-hs-offcanvas="#hs-offcanvas-right"
             >
               <svg
