@@ -8,8 +8,9 @@
   box-sizing: border-box;
   /* font-family: 'Poppins', sans-serif; */
   background-color: transparent;
-}
 
+  font-family: SF Pro Text, Helvetica Neue, sans-serif;
+}
 
 ::-webkit-scrollbar {
   margin-top: 2px;

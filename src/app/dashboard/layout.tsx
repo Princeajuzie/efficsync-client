@@ -6,9 +6,9 @@ export default function layout({ children }: { children: React.ReactNode }) {
       <main className="flex flex-col lg:flex-row w-full  h-full">
         <Sidebar />
 
-        <div className="">
+        <div className="w-full">
           <Navbar />
-          <div className=" bg-red-600 w-[100%] flex flex-col  lg:overflow-y-auto lg:h-[auto] h-[calc(100svh-136px)] overflow-y-auto ">
+          <div className="  w-[100%] flex flex-col  lg:overflow-y-auto lg:h-[auto] h-[calc(100svh-136px)] overflow-y-auto ">
             {children}
           </div>
           <div className="z-20">

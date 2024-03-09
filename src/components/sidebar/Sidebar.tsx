@@ -158,7 +158,7 @@ export function Sidebar() {
  
       <div
         id="application-sidebar"
-        className="    lg:w-96 w-24  border-r-2 absolute hidden lg:block lg:sticky top-0 z-40 lg:z-0 h-screen     border-gray-200      "
+        className="    lg:w-[300px] w-24  border-r-2 absolute hidden lg:block lg:sticky top-0 z-40 lg:z-0 h-screen     border-gray-200      "
       >
         <nav
           className="hs-accordion-group p-6 w-full flex  h-screen justify-between overflow-auto    lg:bottom-0 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300   flex-col "
