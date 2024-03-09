@@ -13,8 +13,8 @@ export function BottomNav() {
           strokeWidth={1.5}
           stroke="currentColor"
           className="inline-block w-6 h-6 mb-1"
-          height="1em"
-          width="1em"
+          height="2em"
+          width="2em"
         >
           <path
             strokeLinecap="round"
@@ -32,8 +32,8 @@ export function BottomNav() {
           fill="none"
           viewBox="0 0 24 24"
           className="inline-block w-6 h-6 mb-1"
-          height="1em"
-          width="1em"
+          height="2em"
+          width="2em"
           strokeWidth={1.5}
           stroke="currentColor"
         >
@@ -70,7 +70,7 @@ export function BottomNav() {
       name: "Teamspaces",
       icon: (
         <svg
-          className="inline-block w-6 h-6 mb-1"
+          className="inline-block w-5 h-6 mb-1"
           height="1em"
           width="1em"
           viewBox="0 0 16 16"
@@ -100,8 +100,8 @@ export function BottomNav() {
       icon: (
         <svg
           className="inline-block w-6 h-6 mb-1"
-          height="1em"
-          width="1em"
+          height="2em"
+          width="2em"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
