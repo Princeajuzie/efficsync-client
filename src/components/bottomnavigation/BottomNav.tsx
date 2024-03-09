@@ -146,7 +146,7 @@ export function BottomNav() {
         </div>
       </div> */}
 
-<section className="  block text-gray-800 bg-white border-t-2 shadow-lg dark:bg-dark backdrop-blur-lg bg-opacity-100 dark:bg-opacity-80 dark:text-gray-400 border-royal/20 md:hidden">
+<section className="  block text-gray-800 bg-white h-16 lg:h-0 border-t-2 shadow-lg dark:bg-dark backdrop-blur-lg bg-opacity-100 dark:bg-opacity-80 dark:text-gray-400 border-royal/20 lg:hidden">
   <div id="tabs" className="flex justify-between">
     <a
       className="justify-center inline-block w-full pt-2 pb-1 text-center focus:text-royal hover:text-royal hover:bg-white text-[#FF3131]  bg-white"
