@@ -54,7 +54,7 @@ export function HomeKanban() {
     });
   }
   return (
-    <div>
+    <div className="max-w-5xl">
       <DndContext onDragStart={onDrag} onDragEnd={onDrageEnd}>
         <div className="gap-4 lg:grid lg:grid-cols-2 grid  grid-cols-1">
           <SortableContext items={columnID}>

@@ -36,7 +36,7 @@ export default function Test({
   if (isDragging) {
     return (
       <div
-        className="h-auto w-auto underline border-dotted border-2 rounded-2xl border-gray-150 bg-[#F8F7FD] decoration-red-600"
+        className="lg:h-auto lg:w-auto  h-[200px] w-auto underline border-dotted border-2 rounded-2xl border-gray-150 bg-[#F8F7FD] "
         ref={setNodeRef}
         style={style}
       ></div>
@@ -44,11 +44,7 @@ export default function Test({
   }
   return (
     <div>
-      <div
-        key={column.id}
-        className="   w-auto"
-      
-      >
+      <div key={column.id} className="   w-auto" ref={setNodeRef} style={style}>
         {/* <h1>{column.tittle}</h1> */}
         <div
           className="dashboards-item-content"
@@ -139,10 +135,12 @@ export default function Test({
                   </svg>
                 </a>
               </button>
-              <button className="pl-1 dashboards-grid-drag text-kimberly-light transition-opacity duration-75 hover:text-kimberly cursor-grabbing"   ref={setNodeRef}
-        style={style}
-        {...attributes}
-        {...listeners}>
+              {/*test*/}
+              <button
+                className="pl-1 dashboards-grid-drag text-kimberly-light transition-opacity duration-75 hover:text-kimberly cursor-grabbing"
+                {...attributes}
+                {...listeners}
+              >
                 <svg
                   width={16}
                   height={16}
