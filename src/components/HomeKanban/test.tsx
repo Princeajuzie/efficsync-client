@@ -47,10 +47,7 @@ export default function Test({
       <div
         key={column.id}
         className="   w-auto"
-        ref={setNodeRef}
-        style={style}
-        {...attributes}
-        {...listeners}
+      
       >
         {/* <h1>{column.tittle}</h1> */}
         <div
@@ -142,7 +139,10 @@ export default function Test({
                   </svg>
                 </a>
               </button>
-              <button className="pl-1 dashboards-grid-drag text-kimberly-light transition-opacity duration-75 hover:text-kimberly">
+              <button className="pl-1 dashboards-grid-drag text-kimberly-light transition-opacity duration-75 hover:text-kimberly cursor-grabbing"   ref={setNodeRef}
+        style={style}
+        {...attributes}
+        {...listeners}>
                 <svg
                   width={16}
                   height={16}
