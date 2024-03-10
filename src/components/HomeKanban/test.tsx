@@ -137,7 +137,7 @@ export default function Test({
               </button>
               {/*test*/}
               <button
-                className="pl-1 dashboards-grid-drag text-kimberly-light transition-opacity duration-75 hover:text-kimberly cursor-grabbing"
+                className="pl-1 dashboards-grid-drag text-kimberly-light  transition-opacity duration-75 hover:text-kimberly cursor-grabbing"
                 {...attributes}
                 {...listeners}
               >
@@ -147,7 +147,7 @@ export default function Test({
                   viewBox="0 0 16 16"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-4"
+                  className="lg:w-4 lg:h-4 size-5"
                 >
                   <path
                     fillRule="evenodd"
