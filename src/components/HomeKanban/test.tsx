@@ -36,7 +36,7 @@ export default function Test({
   if (isDragging) {
     return (
       <div
-        className="lg:h-auto lg:w-auto  h-[200px] w-auto underline border-dotted border-2 rounded-2xl border-gray-150 bg-[#F8F7FD] "
+        className="lg:h-auto lg:w-auto  h-[300px] w-auto underline border-dotted border-2 rounded-2xl border-gray-150 bg-[#F8F7FD] "
         ref={setNodeRef}
         style={style}
       ></div>
