@@ -67,7 +67,7 @@ export function HomeKanban() {
           <DragOverlay>
             {activeColum && <Test column={activeColum} />}
           </DragOverlay>,
-          document.body
+             document.body as unknown as DocumentFragment
         )}
       </DndContext>
     </div>
