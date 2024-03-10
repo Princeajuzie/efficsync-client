@@ -56,7 +56,7 @@ export default function Test({
               <span>
                 <button className="w-full flex items-center" type="button">
                   <span className="grow flex items-center gap-1 text-ay-h4 font-bold text-dark">
-                    My Active Tasks{" "}
+                  {column.tittle}{" "}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
