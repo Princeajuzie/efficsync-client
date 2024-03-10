@@ -56,7 +56,7 @@ export function HomeKanban() {
   return (
     <div>
       <DndContext onDragStart={onDrag} onDragEnd={onDrageEnd}>
-        <div className="flex item-center gap-4 flex-wrap">
+        <div className="gap-4 lg:grid lg:grid-cols-2 grid  grid-cols-1">
           <SortableContext items={columnID}>
             {columns.map((column: any) => {
               return <Test column={column} key={column.id} />;
