@@ -97,7 +97,7 @@ export function Herosection() {
             </h2>
           </div>
           <div className="dashboards-ai mt-4">
-            <button className="flex w-full origin-center items-center space-x-2 rounded-2xl text-[#ACADBF] bg-white p-4 text-kimberly-light transition-transform duration-150 ">
+            <button className="flex w-full origin-center cursor-text items-center space-x-2 rounded-2xl text-[#ACADBF] bg-white p-4 text-kimberly-light transition-transform duration-150 ">
               <svg
                 width={17}
                 height={17}
