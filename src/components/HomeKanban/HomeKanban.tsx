@@ -63,11 +63,11 @@ export function HomeKanban() {
             })}
           </SortableContext>
         </div>
-        {createPortal(
+        {typeof window !== "undefined" && createPortal(
           <DragOverlay>
             {activeColum && <Test column={activeColum} />}
           </DragOverlay>,
-             document.body as unknown as DocumentFragment
+          document.body as unknown as DocumentFragment
         )}
       </DndContext>
     </div>
