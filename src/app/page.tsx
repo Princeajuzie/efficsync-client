@@ -4,15 +4,13 @@ import { Navbar, Sidebar } from "@/components";
 import Kabantest from "@/components/test/Kabantest";
 export default function Home() {
   return (
-    <main className="grid  grid-cols-1">
-      <div className=" ">
-        <Navbar />
-      {/* <Kabantest /> */}
-      </div>
+    <main className="flex item-center flex-col justify-center mx-auto h-screen items-center">
+      <Kabantest />
+      <div className=" ">{/* <Navbar /> */}</div>
 
-      <div className="">
+      {/* <div className="">
         <Sidebar />
-      </div>
+      </div> */}
     </main>
   );
 }

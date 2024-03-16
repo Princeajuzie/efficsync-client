@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { kabarnColumns } from "@/types/Kabarntypes";
+
 import {
   DndContext,
   closestCenter,
@@ -36,6 +37,7 @@ export function HomeKanban() {
       return;
     }
   }
+
 
   function onDrageEnd(Event: DragEndEvent) {
     const { active, over } = Event;
