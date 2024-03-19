@@ -4,7 +4,7 @@ import { Navbar, Sidebar } from "@/components";
 import Kabantest from "@/components/test/Kabantest";
 export default function Home() {
   return (
-    <main className="flex item-center flex-col justify-center mx-auto h-screen items-center">
+    <main className="">
       <Kabantest />
       <div className=" ">{/* <Navbar /> */}</div>
 
