@@ -8,46 +8,48 @@ export function Kabantest() {
   const [grid, setGrid] = useState<any>();
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-    const newMonrri = new Muuri(".dashboards-grid", {
-      dragEnabled: true,
-      layoutDuration: 400,
-      layoutEasing: "ease",
-      // fillGaps: true,
-      dragStartPredicate: (item, e) => {
-        // Disable default drag start predicate
-        return e.target.classList.contains('dragging');
-
-      },
-      // horizontal: true,
-      sortData: {
-        id: function (item, element) {
-          console.log(item);
-          console.log(element.children[0].id);
-          return element.children[0].id;
+    if (typeof window !== "undefined") {
+      const newMonrri = new Muuri(".dashboards-grid", {
+        dragEnabled: true,
+        layoutDuration: 400,
+        layoutEasing: "ease",
+        // fillGaps: true,
+        dragStartPredicate: (item, e) => {
+          // Disable default drag start predicate
+          return e.target.classList.contains("dragging");
         },
-      },
-
-      dragPlaceholder: {
-        enabled: true,
-        createElement: (item: any) => {
-          const placeholder = document.createElement("div");
-          placeholder.style.width = `${item.getElement().clientWidth}px`;
-          placeholder.style.height = `${item.getElement().clientHeight}px`;
-          placeholder.style.backgroundColor = "#f8f7fdec";
-          placeholder.style.border = "1.5px dashed #E7E9F2";
-          placeholder.style.borderRadius = `20px`;
-          return placeholder;
+        // horizontal: true,
+        sortData: {
+          id: function (item, element) {
+            console.log(item);
+            console.log(element.children[0].id);
+            return element.children[0].id;
+          },
         },
-      },
-    });
-  
-    setGrid(newMonrri);
 
-    return () => {
-      newMonrri.destroy();
-    };
-  }
+        dragPlaceholder: {
+          enabled: true,
+          createElement: (item: any): HTMLElement => {
+            if (typeof window !== 'undefined') {
+              const placeholder = document.createElement("div");
+              placeholder.style.width = `${item.getElement().clientWidth}px`;
+              placeholder.style.height = `${item.getElement().clientHeight}px`;
+              placeholder.style.backgroundColor = "#f8f7fdec";
+              placeholder.style.border = "1.5px dashed #E7E9F2";
+              placeholder.style.borderRadius = `20px`;
+              return placeholder;
+            }
+            throw new Error('Window object not available.'); // Throw error if window is not defined
+          },
+        },
+      });
+
+      setGrid(newMonrri);
+
+      return () => {
+        newMonrri.destroy();
+      };
+    }
   }, []);
   return (
     <div
