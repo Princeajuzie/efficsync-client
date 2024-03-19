@@ -1,23 +1,41 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Muuri from "muuri";
-export function Kabantest() {
+export function Kabantest1() {
   const [grid, setGrid] = useState<any>();
-
   useEffect(() => {
     const newMonrri = new Muuri(".grids", {
-      dragEnabled: true,
       layoutDuration: 400,
       layoutEasing: "ease",
       // fillGaps: true,
       // horizontal: true,
       sortData: {
         id: function (item, element) {
-          console.log(item);
-          console.log(element.children[0].id);
           return element.children[0].id;
         },
       },
+      dragEnabled: true,
+      dragStartPredicate: (item, e) => {
+        // Disable default drag start predicate
+        return e.target.className.toLowerCase() === 'h1';
+      },
+      dragSort: true, // Enable sorting during dragging
+      dragRelease: {
+        duration: 400,
+        easing: "ease",
+      },
+      dragPlaceholder: {
+        enabled: true,
+        createElement: (item: any) => {
+          const placeholder = document.createElement("div");
+          placeholder.style.width = `${item.getElement().clientWidth}px`;
+          placeholder.style.height = `${item.getElement().clientHeight}px`;
+          placeholder.style.backgroundColor = "#F5F6F1";
+          placeholder.style.border = "1px dashed white";
+          return placeholder;
+        },
+      },
+      itemDraggingClass: ".h1", // Apply this class when dragging starts
     });
     setGrid(newMonrri);
 
@@ -25,6 +43,7 @@ export function Kabantest() {
       newMonrri.destroy();
     };
   }, []);
+
   return (
     <div>
       <button
@@ -55,7 +74,7 @@ export function Kabantest() {
       >
         Descending
       </button>
-      <div className="grids flex ">
+      <div className="grids flex " >
         <div className="item">
           <div className="item-content" id="A">
             <div
@@ -67,7 +86,10 @@ export function Kabantest() {
                 color: "white",
               }}
             >
-              A
+              <h1 className="h1" >
+                {" "}
+                A
+              </h1>
             </div>
           </div>
         </div>
@@ -82,7 +104,7 @@ export function Kabantest() {
                 color: "white",
               }}
             >
-              B
+              <h1 className="h1">B</h1>
             </div>
           </div>
         </div>
@@ -97,7 +119,7 @@ export function Kabantest() {
                 color: "white",
               }}
             >
-              C
+              <h1 className="h1">C</h1>
             </div>
           </div>
         </div>
@@ -112,7 +134,7 @@ export function Kabantest() {
                 color: "white",
               }}
             >
-              D
+              <h1 className="h1"> D</h1>
             </div>
           </div>
         </div>
@@ -142,7 +164,7 @@ export function Kabantest() {
                 color: "white",
               }}
             >
-              F
+              <h1 className="h1"> F</h1>
             </div>
           </div>
         </div>
@@ -157,7 +179,7 @@ export function Kabantest() {
                 color: "white",
               }}
             >
-              G
+              <h1> G</h1>
             </div>
           </div>
         </div>
@@ -172,7 +194,7 @@ export function Kabantest() {
                 color: "white",
               }}
             >
-              H
+              <h1>H</h1>
             </div>
           </div>
         </div>
@@ -181,4 +203,4 @@ export function Kabantest() {
   );
 }
 
-export default Kabantest;
+export default Kabantest1;
