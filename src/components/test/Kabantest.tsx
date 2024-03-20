@@ -4,11 +4,13 @@ import Muuri from "muuri";
 import { WhatsOnYourMind } from "..";
 import MyRythm from "../HomeKanban/Myrythmn";
 import MyActivetask from "../HomeKanban/Activetask";
+
+//
 export function Kabantest() {
   const [grid, setGrid] = useState<any>();
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" && window.document) {
       const newMonrri = new Muuri(".dashboards-grid", {
         dragEnabled: true,
         layoutDuration: 400,
@@ -30,7 +32,7 @@ export function Kabantest() {
         dragPlaceholder: {
           enabled: true,
           createElement: (item: any): HTMLElement => {
-            if (typeof window !== 'undefined') {
+            if (typeof window !== "undefined" && window.document) {
               const placeholder = document.createElement("div");
               placeholder.style.width = `${item.getElement().clientWidth}px`;
               placeholder.style.height = `${item.getElement().clientHeight}px`;
