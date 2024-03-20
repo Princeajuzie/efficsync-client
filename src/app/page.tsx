@@ -6,8 +6,8 @@ import Kabantest1 from "@/components/test/Kabantest copy";
 export default function Home() {
   return (
     <main className="">
-      {/* <Kabantest1 /> */}
-      
+      <Kabantest1 />
+
       <div className=" ">{/* <Navbar /> */}</div>
 
       {/* <div className="">
