@@ -4,10 +4,12 @@ import React, { useState, useEffect, useRef } from "react";
 import { WhatsOnYourMind } from "..";
 import MyRythm from "../HomeKanban/Myrythmn";
 import MyActivetask from "../HomeKanban/Activetask";
+import Logo from "@/resources/svg/logo.svg";
+import Image from "next/image";
 
 export function Kabantest() {
   const [grid, setGrid] = useState<any>();
-
+  const [isMuuriLoaded, setIsMuuriLoaded] = useState(false);
   const gridRef = useRef<any>(null);
 
   useEffect(() => {
@@ -15,8 +17,6 @@ export function Kabantest() {
       if (typeof window !== "undefined" && window.document) {
         const Muuri = (await import("muuri")).default;
         if (!gridRef.current) {
-
-
           const newMonrri = new Muuri(".dashboards-grid", {
             dragEnabled: true,
             layoutDuration: 400,
@@ -34,13 +34,15 @@ export function Kabantest() {
                 return element.children[0].id;
               },
             },
-  
+
             dragPlaceholder: {
               enabled: true,
               createElement: (item: any): HTMLElement => {
                 if (typeof window !== "undefined" && window.document) {
                   const placeholder = document.createElement("div");
-                  placeholder.style.width = `${item.getElement().clientWidth}px`;
+                  placeholder.style.width = `${
+                    item.getElement().clientWidth
+                  }px`;
                   placeholder.style.height = `${
                     item.getElement().clientHeight
                   }px`;
@@ -53,11 +55,10 @@ export function Kabantest() {
               },
             },
           });
-          
-                  setGrid(newMonrri);
-                  gridRef.current = newMonrri;
-        }
 
+          setGrid(newMonrri);
+          gridRef.current = newMonrri;
+        }
       }
     };
 
@@ -67,16 +68,39 @@ export function Kabantest() {
 
     return () => {
       if (gridRef.current) {
-        gridRef.current.destroy();
+        gridRef.current?.destroy();
       }
     };
-
   }, []);
+
+  const [Timer, setTimer] = React.useState(true);
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setTimer(false);
+    }, 600);
+   
+  }, []);
+
+
   return (
+    <div>
+
+      {Timer?  <div className="flex flex-col items-center justify-center h-screen w-screen gap-4 ease-in-out fixed top-0 left-0 right-0 bottom-0 z-[9999] bg-[#F8F7FD] overflow-hidden scrolltrack">
+     <div className="h-fit bg-black rounded-md items-start w-24  ">
+       <Image src={Logo} width={100} height={100} alt="logo" draggable={false} />
+     </div>
+     <p className=" w-96 text-center animate-fade-from-bottom text-dark ">
+       Good morning, Prince! Coffee or tea to start your day?
+     </p>
+   </div>
+    : 
+    <></>}
     <div
       className="dashboards-grid relative z-10 mx-auto  mt-3   max-w-full pt-4 sm:p-4 md:pr-4 muuri-active muuri"
       style={{ height: 1115 }}
     >
+
       <div
         data-id="ActiveTasks"
         className="dashboards-item w-full md:w-6/12 muuri-item muuri-item-shown"
@@ -1179,6 +1203,7 @@ export function Kabantest() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

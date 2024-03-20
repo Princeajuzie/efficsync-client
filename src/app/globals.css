@@ -36,6 +36,11 @@ body{
   width: 4px;
 }
 
+.scrolltrack::-webkit-scrollbar{
+  display: none;
+  opacity: 1;
+}
+
 
 [data-v-39dbc6e5] .btn {
   margin: .25rem 1rem 1rem;
@@ -192,3 +197,14 @@ body{
   z-index: 999; /* Ensure the overlay is on top of other elements */
   pointer-events: none; /* Allow interactions with elements underneath */
 }
+
+
+.animate-fade-from-bottom {
+  animation: fadeFromBottom .75s ease-in-out;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding-top: 20px;
+
+}
+

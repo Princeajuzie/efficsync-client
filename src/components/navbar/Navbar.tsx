@@ -3,7 +3,7 @@ import Logo from "@/resources/svg/logo.svg";
 import Image from "next/image";
 export function Navbar() {
   return (
-    <header className="  sticky top-0 inset-x-0 flex flex-wrap lg:h-auto h-18 sm:justify-start sm:flex-nowrap z-[48] w-full bg-white border-b text-sm lg:py-3 py-2.5 sm:py-6 ">
+    <header className="  sticky top-0 inset-x-0 flex flex-wrap lg:h-auto h-18 sm:justify-start sm:flex-nowrap z-[20] w-full bg-white border-b text-sm lg:py-3 py-2.5 sm:py-6 ">
       <nav
         className="flex basis-full items-center w-full mx-auto px-4 sm:px-6 md:px-8"
         aria-label="Global"
