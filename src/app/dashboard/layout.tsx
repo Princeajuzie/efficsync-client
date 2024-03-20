@@ -22,10 +22,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
         <div className="w-full">
           <Navbar />
-          <div className="  w-[100%] flex flex-col  lg:overflow-auto lg:h-[auto] h-[calc(100svh-136px)] overflow-y-auto ">
+          <div className="  ">
             {children}
           </div>
-          <div className="z-20">
+          <div className=" w-full ">
             <BottomNav />
           </div>
         </div>
