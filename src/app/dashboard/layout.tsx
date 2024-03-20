@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Navbar, Sidebar, BottomNav, WelcomePage } from "@/components";
+import { Navbar, Sidebar, BottomNav,  } from "@/components";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [Timer, setTimer] = React.useState(true);
@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   React.useEffect(() => {
     setTimeout(() => {
       setTimer(false);
-    }, 600);
+    }, 2000);
   }, []);
 
   return (

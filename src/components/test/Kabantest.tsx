@@ -78,7 +78,7 @@ export function Kabantest() {
   React.useEffect(() => {
     setTimeout(() => {
       setTimer(false);
-    }, 600);
+    }, 2000);
    
   }, []);
 
