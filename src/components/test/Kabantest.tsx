@@ -4,8 +4,9 @@ import Muuri from "muuri";
 import { WhatsOnYourMind } from "..";
 import MyRythm from "../HomeKanban/Myrythmn";
 import MyActivetask from "../HomeKanban/Activetask";
+import dynamic from "next/dynamic";
 
-//
+
 export function Kabantest() {
   const [grid, setGrid] = useState<any>();
 
