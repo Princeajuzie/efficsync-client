@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 // import Muuri from "muuri";
 import { WhatsOnYourMind } from "..";
 import MyRythm from "../HomeKanban/Myrythmn";
@@ -8,61 +8,70 @@ import MyActivetask from "../HomeKanban/Activetask";
 export function Kabantest() {
   const [grid, setGrid] = useState<any>();
 
+  const gridRef = useRef<any>(null);
+
   useEffect(() => {
     const initializeMuuri = async () => {
-
       if (typeof window !== "undefined" && window.document) {
         const Muuri = (await import("muuri")).default;
-        const newMonrri = new Muuri(".dashboards-grid", {
-          dragEnabled: true,
-          layoutDuration: 400,
-          layoutEasing: "ease",
-          // fillGaps: true,
-          dragStartPredicate: (item, e) => {
-            // Disable default drag start predicate
-            return e.target.classList.contains("dragging");
-          },
-          // horizontal: true,
-          sortData: {
-            id: function (item, element) {
-              console.log(item);
-              console.log(element.children[0].id);
-              return element.children[0].id;
+        if (!gridRef.current) {
+
+
+          const newMonrri = new Muuri(".dashboards-grid", {
+            dragEnabled: true,
+            layoutDuration: 400,
+            layoutEasing: "ease",
+            // fillGaps: true,
+            dragStartPredicate: (item, e) => {
+              // Disable default drag start predicate
+              return e.target.classList.contains("dragging");
             },
-          },
-  
-          dragPlaceholder: {
-            enabled: true,
-            createElement: (item: any): HTMLElement => {
-              if (typeof window !== "undefined" && window.document) {
-                const placeholder = document.createElement("div");
-                placeholder.style.width = `${item.getElement().clientWidth}px`;
-                placeholder.style.height = `${item.getElement().clientHeight}px`;
-                placeholder.style.backgroundColor = "#f8f7fdec";
-                placeholder.style.border = "1.5px dashed #E7E9F2";
-                placeholder.style.borderRadius = `20px`;
-                return placeholder;
-              }
-              throw new Error("Window object not available."); // Throw error if window is not defined
+            // horizontal: true,
+            sortData: {
+              id: function (item, element) {
+                console.log(item);
+                console.log(element.children[0].id);
+                return element.children[0].id;
+              },
             },
-          },
-        });
   
-        setGrid(newMonrri);
-  
-     
+            dragPlaceholder: {
+              enabled: true,
+              createElement: (item: any): HTMLElement => {
+                if (typeof window !== "undefined" && window.document) {
+                  const placeholder = document.createElement("div");
+                  placeholder.style.width = `${item.getElement().clientWidth}px`;
+                  placeholder.style.height = `${
+                    item.getElement().clientHeight
+                  }px`;
+                  placeholder.style.backgroundColor = "#f8f7fdec";
+                  placeholder.style.border = "1.5px dashed #E7E9F2";
+                  placeholder.style.borderRadius = `20px`;
+                  return placeholder;
+                }
+                throw new Error("Window object not available."); // Throw error if window is not defined
+              },
+            },
+          });
+          
+                  setGrid(newMonrri);
+                  gridRef.current = newMonrri;
+        }
+
       }
- 
-    }
+    };
 
     if (typeof window !== "undefined" && window.document) {
       initializeMuuri();
     }
 
     return () => {
-      grid?.destroy();
+      if (gridRef.current) {
+        gridRef.current.destroy();
+      }
     };
-  }, [grid]);
+
+  }, []);
   return (
     <div
       className="dashboards-grid relative z-10 mx-auto  mt-3   max-w-full pt-4 sm:p-4 md:pr-4 muuri-active muuri"
