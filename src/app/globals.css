@@ -168,7 +168,7 @@ body {
 
 
 .muuri-item {
-  touch-action: auto;
+  touch-action: none;
 }
 
 .dashboards-grid {
