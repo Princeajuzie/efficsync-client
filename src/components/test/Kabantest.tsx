@@ -84,7 +84,7 @@ export function Kabantest() {
   return (
     <div>
       {Timer ? (
-        <div className="flex flex-col items-center justify-center h-screen w-screen gap-4 ease-in-out fixed top-0 left-0 right-0 bottom-0 z-[9999] bg-[#F8F7FD] overflow-hidden scrolltrack">
+        <div className="flex flex-col items-center justify-center h-screen w-screen  gap-4 ease-in-out fixed top-0 left-0 right-0 bottom-0 z-[9999] bg-[#F8F7FD] overflow-hidden scrolltrack">
           <div className="h-fit bg-black rounded-md items-start w-24  ">
             <Image
               src={Logo}
@@ -101,7 +101,7 @@ export function Kabantest() {
       ) : (
         <></>
       )}
-      <div className="dashboards-grid relative lg:z-10 z-0 mx-auto  xl:w-[990px]  w-auto   mt-3   max-w-full  muuri-active muuri  ">
+      <div className="dashboards-grid relative  lg:z-10 z-0 mx-auto  xl:w-[990px]  w-auto     max-w-full  muuri-active muuri  ">
         <div
           data-id="ActiveTasks"
           className="dashboards-item w-full md:w-6/12 muuri-item muuri-item-shown"
