@@ -120,8 +120,8 @@ body {
 }
 
 .dashboards-grid.muuri-active .dashboards-item {
-  position: absolute;
-  z-index: 0;
+  /* position: absolute;
+  z-index: 0; */
 
   will-change: transform;
 }
