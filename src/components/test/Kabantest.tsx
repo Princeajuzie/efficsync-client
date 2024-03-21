@@ -101,7 +101,7 @@ export function Kabantest() {
       ) : (
         <></>
       )}
-      <div className="dashboards-grid relative z-10 mx-auto  w-[990px]    mt-3   max-w-full  muuri-active muuri  ">
+      <div className="dashboards-grid relative z-10 mx-auto  xl:w-[990px]  w-auto   mt-3   max-w-full  muuri-active muuri  ">
         <div
           data-id="ActiveTasks"
           className="dashboards-item w-full md:w-6/12 muuri-item muuri-item-shown"

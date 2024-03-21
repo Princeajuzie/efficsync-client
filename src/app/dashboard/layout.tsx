@@ -14,7 +14,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative">
       <main
-        className={`flex flex-col lg:flex-row w-full  h-full scrolltrack ${
+        className={`flex flex-col lg:flex-row w-full  h-full  ${
           Timer ? "fixed" : ""
         }  `}
       >
