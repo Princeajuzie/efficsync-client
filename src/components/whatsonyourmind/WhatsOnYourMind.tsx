@@ -2,7 +2,7 @@ import React from "react";
 
 export function WhatsOnYourMind() {
   return (
-    <div className="w-full z-10">
+    <div className="w-full z-10 px-2">
       <button
         data-e2e="fresh-widget-button"
         className="fresh-widget-button group  mx-auto flex  cursor-pointer overflow-auto rounded-2xl bg-white p-4 text-left text-kimberly drop-shadow hover:drop-shadow-md  w-full"
