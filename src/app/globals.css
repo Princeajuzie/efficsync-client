@@ -145,7 +145,7 @@ body {
 
 .dashboards-grid.muuri-active .dashboards-item.muuri-item-dragging,
 .dashboards-grid.muuri-active .dashboards-item.muuri-item-releasing {
-  z-index: 9999;
+  z-index: 999;
 }
 
 .dashboards-grid.muuri-active .dashboards-item.muuri-item-dragging {

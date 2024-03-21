@@ -2,7 +2,7 @@ import React from "react";
 
 export function WhatsOnYourMind() {
   return (
-    <div className="w-full mb-3">
+    <div className="w-full z-10">
       <button
         data-e2e="fresh-widget-button"
         className="fresh-widget-button group relative mx-auto flex  cursor-pointer overflow-auto rounded-2xl bg-white p-4 text-left text-kimberly drop-shadow hover:drop-shadow-md  mb-4 w-full"
@@ -17,7 +17,8 @@ export function WhatsOnYourMind() {
         </span>
         <span className=" cursor-text top-0 bg-[#F8F7FD] !m-0 flex h-10 flex-grow  flex-row items-center gap-4 !truncate rounded-lg bg-steam px-4 text-kimberly duration-150 group-hover:bg-mist hover:border-dust">
           <span className="relative flex w-full items-center  text-sm truncate  text-[#5C5C66]">
-            <span className="mr-2 animate-ping">|</span>Click to Start Creating 🚀
+            <span className="mr-2 animate-ping">|</span>Click to Start Creating
+            🚀
           </span>
         </span>
       </button>
