@@ -12,7 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="z-10">
       <main
         className={`flex flex-col lg:flex-row w-full  h-full  ${
           Timer ? "fixed" : ""
