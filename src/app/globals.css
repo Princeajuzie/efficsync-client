@@ -37,6 +37,15 @@ body {
   width: 4px;
 }
 
+
+.muuri-item {
+  touch-action: auto !important;
+}
+
+.dashboards-grid {
+  touch-action: pan-y !important; /* Allow vertical scrolling */
+}
+
 [data-v-39dbc6e5] .btn {
   margin: 0.25rem 1rem 1rem;
   display: flex;
@@ -167,10 +176,4 @@ body {
 }
 
 
-.muuri-item {
-  touch-action: auto !important;
-}
 
-.dashboards-grid {
-  touch-action: pan-y; /* Allow vertical scrolling */
-}
