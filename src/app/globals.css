@@ -37,7 +37,6 @@ body {
   width: 4px;
 }
 
-
 .muuri-item {
   touch-action: auto !important;
 }
@@ -122,8 +121,6 @@ body {
   display: none;
 }
 
-
-
 .dashboards-grid.muuri-active .dashboards-grid-drag {
   display: block;
 }
@@ -165,8 +162,6 @@ body {
   background-color: #edeef733;
 }
 
-
-
 .animate-fade-from-bottom {
   animation: fadeFromBottom 0.75s ease-in-out;
   text-align: center;
@@ -175,5 +170,79 @@ body {
   padding-top: 20px;
 }
 
+@keyframes bounce {
+  0%,
+  to {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
 
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
 
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes fadeFromBottom {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-from-bottom {
+  animation: fadeFromBottom 0.75s ease-in-out;
+}
+
+@keyframes fadeFromTop {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-from-top {
+  animation: fadeFromTop 0.35s ease-in-out;
+}
+
+@keyframes ping {
+  75%,
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

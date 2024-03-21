@@ -5,7 +5,7 @@ export function WhatsOnYourMind() {
     <div className="w-full z-10">
       <button
         data-e2e="fresh-widget-button"
-        className="fresh-widget-button group relative mx-auto flex  cursor-pointer overflow-auto rounded-2xl bg-white p-4 text-left text-kimberly drop-shadow hover:drop-shadow-md  mb-4 w-full"
+        className="fresh-widget-button group  mx-auto flex  cursor-pointer overflow-auto rounded-2xl bg-white p-4 text-left text-kimberly drop-shadow hover:drop-shadow-md  w-full"
         class-list="bg-mist hover:bg-dust"
       >
         <span className="mr-2 flex h-10 w-10 flex-shrink-0 overflow-hidden rounded-full">
