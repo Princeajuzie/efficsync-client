@@ -15,10 +15,10 @@ export function Kabantest1() {
         },
       },
       dragEnabled: true,
-      dragStartPredicate: (item, e) => {
-        // Disable default drag start predicate
-        return e.target.className.toLowerCase() === 'h1';
-      },
+      // dragStartPredicate: (item, e) => {
+      //   // Disable default drag start predicate
+      //   return e.target.className.toLowerCase() === 'h1';
+      // },
       dragSort: true, // Enable sorting during dragging
       dragRelease: {
         duration: 400,
@@ -74,7 +74,8 @@ export function Kabantest1() {
       >
         Descending
       </button>
-      <div className="grids flex " >
+      <div className="grids flex ">
+   
         <div className="item">
           <div className="item-content" id="A">
             <div
@@ -86,10 +87,7 @@ export function Kabantest1() {
                 color: "white",
               }}
             >
-              <h1 className="h1" >
-                {" "}
-                A
-              </h1>
+              <h1 className="h1"> A</h1>
             </div>
           </div>
         </div>
@@ -149,7 +147,7 @@ export function Kabantest1() {
                 color: "white",
               }}
             >
-              E
+              <h1 className="h1">E</h1>
             </div>
           </div>
         </div>
@@ -179,7 +177,7 @@ export function Kabantest1() {
                 color: "white",
               }}
             >
-              <h1> G</h1>
+              <h1 className="h1"> G</h1>
             </div>
           </div>
         </div>
@@ -194,7 +192,7 @@ export function Kabantest1() {
                 color: "white",
               }}
             >
-              <h1>H</h1>
+              <h1 className="h1">H</h1>
             </div>
           </div>
         </div>
