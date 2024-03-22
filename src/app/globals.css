@@ -6,7 +6,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: 'Poppins', sans-serif; */
   background-color: transparent;
 
   font-family: SF Pro Text, Helvetica Neue, sans-serif;
@@ -15,6 +14,8 @@
 body {
   background: #f8f7fd;
 }
+
+/* default styles */
 
 ::-webkit-scrollbar {
   margin-top: 2px;

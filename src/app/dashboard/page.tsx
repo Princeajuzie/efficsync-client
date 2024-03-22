@@ -7,9 +7,9 @@ export default function page() {
   return (
     <div className="h-auto w-full ">
       <Herosection />
-      <div className="w-full h-full  lg:px-4 px-4 pt-4 mx-auto  lg:justify-center items-center lg:flex lg:flex-col max-w-[1280px]">
+      <div className="w-full h-full  lg:px-4  mx-auto  lg:justify-center items-center lg:flex lg:flex-col max-w-[1280px]">
         <WhatsOnYourMind />
-        <div className=" w-full h-auto mt-3">
+        <div className=" w-full h-auto ">
           <Kabantest />
         </div>
       </div>

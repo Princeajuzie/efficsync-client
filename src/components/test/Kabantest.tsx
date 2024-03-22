@@ -94,7 +94,7 @@ export function Kabantest() {
               draggable={false}
             />
           </div>
-          <p className=" w-96 text-center animate-fade-from-bottom text-dark ">
+          <p className=" w-full text-center animate-fade-from-bottom text-dark text-[20px] ">
             Good morning, Prince! Coffee or tea to start your day?
           </p>
         </div>
