@@ -9,7 +9,7 @@ export default function page() {
       <Herosection />
       <div className="w-full h-full  lg:px-4  mx-auto  lg:justify-center items-center lg:flex lg:flex-col max-w-[1280px]">
         <WhatsOnYourMind />
-        <div className=" w-full h-auto">
+        <div className=" w-full h-auto bg-purple-600">
           <Kabantest />
         </div>
       </div>
