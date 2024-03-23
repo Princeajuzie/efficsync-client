@@ -63,9 +63,9 @@ export function Getstarted() {
             </div>
           </div>
           <div className="flex w-full items-center justify-between px-4 pb-4 text-ay-l1 text-kimberly">
-            {" "}
+           
             Ayanza is like a Lego to build anything your team needs. Pick your
-            use-case and try it out.{" "}
+            use-case and try it out.
           </div>
           <div data-v-39dbc6e5="" className="pb-2 mx-4 mb-2">
             <div data-v-39dbc6e5="" className="flex flex-wrap gap-x-2">
