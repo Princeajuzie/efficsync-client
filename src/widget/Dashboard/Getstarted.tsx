@@ -38,12 +38,7 @@ export function Getstarted() {
               </button>
               <button
                 className="pl-1 dashboards-grid-drag text-kimberly-light transition-opacity duration-75 hover:text-kimberly"
-                style={{
-                  touchAction: "none",
-                  userSelect: "none",
-
-                  WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                }}
+         
               >
                 <svg
                   width={16}
