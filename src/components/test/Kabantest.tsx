@@ -58,6 +58,8 @@ export function Kabantest() {
 
           setGrid(newMonrri);
           gridRef.current = newMonrri;
+
+    
         }
       }
     };
@@ -81,6 +83,40 @@ export function Kabantest() {
     }, 2000);
   }, []);
 
+   
+  useEffect(() => {
+    if(typeof window !== "undefined"){
+
+      if (grid) {
+        const layoutData = window.localStorage.getItem("layout");
+        if (layoutData) {
+          loadLayout(grid, layoutData);
+        }
+  
+        grid.on("move", () => {
+          saveLayout();
+        });
+      }
+    }
+  }, [grid]);
+
+  function serializeLayout(grid:any) {
+    return JSON.stringify(grid.getItems().map((item:any) => item.getElement().getAttribute('data-id')));
+  }
+
+  function saveLayout() {
+    const layout = serializeLayout(grid);
+   typeof window !== "undefined" && window.localStorage.setItem("layout", layout);
+  }
+
+  function loadLayout(grid:any, serializedLayout:any) {
+    const layout = JSON.parse(serializedLayout);
+    const currentItems = grid.getItems();
+    const currentItemIds = currentItems.map((item:any) => item.getElement().getAttribute('data-id'));
+    const newItems = layout.map((itemId:any) => currentItems.find((item:any) => item.getElement().getAttribute('data-id') === itemId)).filter(Boolean);
+    grid.sort(newItems, { layout: 'instant' });
+  }
+
   return (
     <div>
       {Timer ? (
@@ -95,7 +131,7 @@ export function Kabantest() {
             />
           </div>
           <p className=" w-full text-center animate-fade-from-bottom text-dark text-[20px] ">
-            Good morning, Prince! Coffee or tea to start your day?
+            Good morning, Prince! <br /> Coffee or tea to start your day?
           </p>
         </div>
       ) : (
