@@ -1,7 +1,9 @@
 "use client";
-import { Herosection, HomeKanban, WhatsOnYourMind } from "@/components";
-import Kabantest from "@/components/test/Kabantest";
-import React from "react";
+import {
+  Herosection,
+  WhatsOnYourMind,
+  DashboardDraggable,
+} from "@/components/dashboard";
 
 export default function page() {
   return (
@@ -10,7 +12,7 @@ export default function page() {
       <div className="w-full h-full  lg:px-4  mx-auto  lg:justify-center items-center lg:flex lg:flex-col max-w-[1280px]">
         <WhatsOnYourMind />
         <div className=" w-full h-auto ">
-          <Kabantest />
+          <DashboardDraggable />
         </div>
       </div>
     </div>

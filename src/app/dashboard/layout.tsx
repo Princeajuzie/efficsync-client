@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Navbar, Sidebar, BottomNav } from "@/components";
+import { Navbar, Sidebar, BottomNav } from "@/components/dashboard";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [Timer, setTimer] = React.useState(true);
