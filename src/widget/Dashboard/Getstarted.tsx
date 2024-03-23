@@ -81,15 +81,15 @@ export function Getstarted() {
                     data-v-39dbc6e5=""
                     className="mb-2 mt-4 px-3 text-[16px] font-bold text-caribic"
                   >
-                    {" "}
-                    Task Management{" "}
+                 
+                    Task Management
                   </h1>
                   <p
                     data-v-39dbc6e5=""
                     className="mb-4 px-3 text-[14px] text-kimberly"
                   >
-                    {" "}
-                    Organize tasks &amp; manage projects.{" "}
+                
+                    Organize tasks &amp; manage projects.
                   </p>
                 </div>
               </div>
