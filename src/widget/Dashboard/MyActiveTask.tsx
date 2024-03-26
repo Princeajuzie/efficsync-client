@@ -3,8 +3,6 @@ import React from 'react'
 export  function MyActiveTask() {
   return (
 
-    <div className="dashboards-item-content">
-      {/**/}
       <div className="flex flex-col border border-mist bg-white shadow-sm rounded-2xl">
         <div className="flex w-full items-center px-4 h-12 pb-1">
           <span>
@@ -482,7 +480,7 @@ export  function MyActiveTask() {
           </div>
         </div>
       </div>
-    </div>
+
 
   )
 }

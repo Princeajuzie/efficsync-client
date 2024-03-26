@@ -135,28 +135,37 @@ export function DashboardDraggable() {
           data-id="activetask"
           className="dashboards-item w-full md:w-6/12 muuri-item muuri-item-shown"
         >
-          <MyActiveTask />
+          <div className="dashboards-item-content">
+            <MyActiveTask />
+          </div>
         </div>
         {/* my Active task widget  */}
         <div
           data-id="recent"
           className="dashboards-item w-full md:w-6/12 muuri-item muuri-item-shown"
         >
-          <Recent />
+          <div className="dashboards-item-content">
+            <Recent />
+          </div>
         </div>
         {/* my Rwecent  widget  */}
         <div
           data-id="getstarted"
           className="dashboards-item w-full md:w-6/12 muuri-item muuri-item-shown"
         >
-          <Getstarted />
+          <div className="dashboards-item-content">
+            <Getstarted />
+          </div>
         </div>
         {/* Get started  widget  */}
         <div
           data-id="engagement"
           className="dashboards-item w-full md:w-6/12 muuri-item muuri-item-shown"
         >
-          <Engagement />
+          <div className="dashboards-item-content">
+            {/**/}
+            <Engagement />
+          </div>
         </div>
 
         {/* my  Engagement  widget  */}
@@ -164,7 +173,10 @@ export function DashboardDraggable() {
           data-id="teamspace"
           className="dashboards-item w-full md:w-6/12 muuri-item muuri-item-shown"
         >
-          <Teamspace />
+          <div className="dashboards-item-content">
+            {/**/}
+            <Teamspace />
+          </div>
         </div>
 
         {/* my Team space  widget  */}
@@ -172,7 +184,9 @@ export function DashboardDraggable() {
           data-id="message"
           className="dashboards-item w-full md:w-6/12 muuri-item muuri-item-shown"
         >
-          <Message />
+          <div className="dashboards-item-content">
+            <Message />
+          </div>
         </div>
         {/* my messages widget  */}
       </div>

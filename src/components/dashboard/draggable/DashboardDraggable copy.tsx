@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 // import Muuri from "muuri";
-import { Welcome, WhatsOnYourMind } from '@/components/dashboard';
+import { Welcome, WhatsOnYourMind } from "@/components/dashboard";
 import {
   Engagement,
   Getstarted,
@@ -82,20 +82,20 @@ export function DashboardDraggable() {
     }, 2000);
   }, []);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (grid) {
-        const layoutData = window.localStorage.getItem("layout");
-        if (layoutData) {
-          loadLayout(grid, layoutData);
-        }
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     if (grid) {
+  //       const layoutData = window.localStorage.getItem("layout");
+  //       if (layoutData) {
+  //         loadLayout(grid, layoutData);
+  //       }
 
-        grid.on("move", () => {
-          saveLayout();
-        });
-      }
-    }
-  }, [grid]);
+  //       grid.on("move", () => {
+  //         saveLayout();
+  //       });
+  //     }
+  //   }
+  // }, [grid]);
 
   function serializeLayout(grid: any) {
     return JSON.stringify(

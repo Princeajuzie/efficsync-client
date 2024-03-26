@@ -2,7 +2,6 @@ import React from "react";
 
 export function Getstarted() {
   return (
-    <div className="dashboards-item-content">
     <div className="flex flex-col border border-mist bg-white shadow-sm rounded-2xl">
       <div className="flex w-full items-center justify-between px-4 h-12 pb-1">
         <div className="text-ay-h4 font-bold">Get Started     </div>
@@ -92,8 +91,7 @@ export function Getstarted() {
         </div>
       </div>
     </div>
-    {/**/}
-  </div>
+
   );
 }
 
