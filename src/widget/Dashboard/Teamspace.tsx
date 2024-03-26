@@ -3,9 +3,9 @@ import React from "react";
 export function Teamspace() {
   return (
     <div className="flex flex-col border border-mist bg-white shadow-sm rounded-2xl overflow-hidden">
-      <div className="flex items-center  px-4 h-12 pb-1 w-full bg-red-600">
+      <div className="px-4 h-12 pb-1 flex w-full items-center">
         <div className="text-ay-h4 font-bold">My Teamspaces</div>
-        <div className="grow items-end" />
+        <div className="grow" />
         <button className="c-circle-button flex h-10 shrink-0 cursor-pointer items-center justify-center gap-2 rounded-lg px-3 outline-none transition-colors md:h-8 md:px-2 border border-transparent text-kimberly sm:hover:bg-mist sm:hover:text-dark text-kimberly-light hover:!text-kimberly">
           <svg
             viewBox="0 0 16 16"
