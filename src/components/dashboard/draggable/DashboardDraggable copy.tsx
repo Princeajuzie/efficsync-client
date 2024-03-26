@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 // import Muuri from "muuri";
-import { Welcome, WhatsOnYourMind } from "@/components/dashboard";
+import { Welcome, WhatsOnYourMind } from '@/components/dashboard';
 import {
   Engagement,
   Getstarted,
@@ -131,49 +131,19 @@ export function DashboardDraggable() {
         <Welcome />
       )}
       <div className="dashboards-grid relative  lg:z-10 z-0 mx-auto  xl:w-[990px]  w-auto  max-w-full  muuri-active muuri  ">
-        <div
-          data-id="activetask"
-          className="dashboards-item w-full md:w-6/12 muuri-item muuri-item-shown"
-        >
-          <MyActiveTask />
-        </div>
+        <MyActiveTask />
         {/* my Active task widget  */}
-        <div
-          data-id="recent"
-          className="dashboards-item w-full md:w-6/12 muuri-item muuri-item-shown"
-        >
-          <Recent />
-        </div>
+        <Recent />
         {/* my Rwecent  widget  */}
-        <div
-          data-id="getstarted"
-          className="dashboards-item w-full md:w-6/12 muuri-item muuri-item-shown"
-        >
-          <Getstarted />
-        </div>
+        <Getstarted />
         {/* Get started  widget  */}
-        <div
-          data-id="engagement"
-          className="dashboards-item w-full md:w-6/12 muuri-item muuri-item-shown"
-        >
-          <Engagement />
-        </div>
 
+        <Engagement />
         {/* my  Engagement  widget  */}
-        <div
-          data-id="teamspace"
-          className="dashboards-item w-full md:w-6/12 muuri-item muuri-item-shown"
-        >
-          <Teamspace />
-        </div>
 
+        <Teamspace />
         {/* my Team space  widget  */}
-        <div
-          data-id="message"
-          className="dashboards-item w-full md:w-6/12 muuri-item muuri-item-shown"
-        >
-          <Message />
-        </div>
+        <Message />
         {/* my messages widget  */}
       </div>
     </div>

@@ -2,10 +2,7 @@ import React from 'react'
 
 export  function Engagement() {
   return (
-    <div
-    data-id="Engagement"
-    className="dashboards-item w-full md:w-6/12 muuri-item muuri-item-shown"
-  >
+
     <div className="dashboards-item-content">
       {/**/}
       <div className="flex flex-col border border-mist bg-white shadow-sm rounded-2xl overflow-hidden">
@@ -41,7 +38,7 @@ export  function Engagement() {
         </section>
       </div>
     </div>
-  </div>
+
   )
 }
 

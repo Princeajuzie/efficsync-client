@@ -2,10 +2,7 @@ import React from 'react'
 
 export  function Recent() {
   return (
-    <div
-    data-id="Recent"
-    className="dashboards-item w-full md:w-6/12 muuri-item muuri-item-shown"
-  >
+
     <div className="dashboards-item-content">
       {/**/}
       <div className="flex flex-col border border-mist bg-white shadow-sm rounded-2xl">
@@ -43,7 +40,7 @@ export  function Recent() {
         </div>
       </div>
     </div>
-  </div>
+
   )
 }
 
