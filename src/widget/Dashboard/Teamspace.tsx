@@ -1,16 +1,12 @@
-import React from 'react'
+import React from "react";
 
-export  function Teamspace() {
+export function Teamspace() {
   return (
-
     <div className="flex flex-col border border-mist bg-white shadow-sm rounded-2xl overflow-hidden">
-      <div className="px-4 h-12 pb-1 flex w-full items-center">
+      <div className="flex items-center  px-4 h-12 pb-1 w-full bg-red-600">
         <div className="text-ay-h4 font-bold">My Teamspaces</div>
-        <div className="grow" />
-        <button
-          className="c-circle-button flex h-10 shrink-0 cursor-pointer items-center justify-center gap-2 rounded-lg px-3 outline-none transition-colors md:h-8 md:px-2 border border-transparent text-kimberly sm:hover:bg-mist sm:hover:text-dark text-kimberly-light hover:!text-kimberly"
-
-        >
+        <div className="grow items-end" />
+        <button className="c-circle-button flex h-10 shrink-0 cursor-pointer items-center justify-center gap-2 rounded-lg px-3 outline-none transition-colors md:h-8 md:px-2 border border-transparent text-kimberly sm:hover:bg-mist sm:hover:text-dark text-kimberly-light hover:!text-kimberly">
           <svg
             viewBox="0 0 16 16"
             width={16}
@@ -34,17 +30,14 @@ export  function Teamspace() {
             />
           </svg>
         </button>
-        <button
-          className="pl-1 dashboards-grid-drag text-kimberly-light transition-opacity duration-75 hover:text-kimberly"
-    
-        >
+        <button className="pl-1 dashboards-grid-drag text-kimberly-light transition-opacity duration-75 hover:text-kimberly">
           <svg
             width={16}
             height={16}
             viewBox="0 0 16 16"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-4 dragging"
+            className="w-4"
           >
             <path
               fillRule="evenodd"
@@ -66,10 +59,7 @@ export  function Teamspace() {
           className="flex mr-2 space-x-2 shrink-0 items-center text-ay-p2 rounded-lg font-medium text-dark h-[32px] hover:bg-mist p-1 transition duration-75"
         >
           <div className="h-6 w-6 shrink-0 overflow-hidden rounded-full bg-mist">
-            <div
-              className="relative flex items-center justify-center overflow-hidden rounded-full bg-mist h-6 w-6"
-         
-            >
+            <div className="relative flex items-center justify-center overflow-hidden rounded-full bg-mist h-6 w-6">
               <img
                 className="async-image absolute inset-0 h-full w-full object-cover"
                 src="https://storage.googleapis.com/ayanza-com.appspot.com/organization/hcd3VU2jaLf8m3jcTSVM/Untitled%2520design-8dd3b553-0563-411d-85bc-c6bc9eeda36b.png?GoogleAccessId=158717140602-compute%40developer.gserviceaccount.com&Expires=1711564670&Signature=b9pHxtjWqUPuGedUdX5WWYfrEqdc34avKCH3xhngDW3BQzpMyjyWfdjSov6bNAj6oK9MOW5j%2FDqMtImgG09MqZW9oT2hXDoky3DAP2BUFrG%2FFEqB5AwqgTfgE5o9PZejp8nwQDC8jCPE0%2BvrBHDG8Y7yeaPGo42LIsniUxYqyY9ftbTq3yaDuqEqMCmlAQEAYp7yfbMNeUemEs0ycmiMoNGS6jVeuKdB2m2kQKNs9tPi85DywLKlVdbQcULM%2F7sdV7UdeyeNt0hzk63eZrMR%2FYIFYW1xgoBqoEcSMXUUJiOfSxgD1%2FUb86IiriuYw2u%2BN%2F%2BnxVA5h%2F9BvO76m%2BzJQQ%3D%3D"
@@ -84,9 +74,7 @@ export  function Teamspace() {
         {/**/}
       </div>
     </div>
-  
-
-  )
+  );
 }
 
 export default Teamspace;
