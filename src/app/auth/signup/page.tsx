@@ -1,6 +1,28 @@
-import React from "react";
+"use client";
+import React, { FormEventHandler } from "react";
 import Link from "next/link";
-export default function page() {
+import { AuthInterface } from "@/types";
+export default function Page() {
+  const [FormData, setFormData] = React.useState<AuthInterface>({
+    email: "",
+    password: "",
+    username: "",
+  });
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    const newusername: string = value.substring(0, value.indexOf("@"));
+
+    setFormData({
+      ...FormData,
+      username: newusername,
+      [name]: value,
+    });
+  };
+
+  React.useEffect(()=>{
+    console.log(FormData)
+  }, [FormData])
   return (
     <main className="flex items-center justify-center">
       <section
@@ -79,6 +101,9 @@ export default function page() {
                         name="email"
                         className="py-3 px-4 block w-full border-gray-200 border-[1px] rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                         required
+                        onChange={(event: Event | any) =>
+                          handleInputChange(event)
+                        }
                         aria-describedby="email-error"
                       />
                       <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
@@ -115,6 +140,9 @@ export default function page() {
                         name="password"
                         className="py-3 px-4 block w-full border-gray-200  border-[1px] rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                         required
+                        onChange={(event: Event | any) =>
+                          handleInputChange(event)
+                        }
                         aria-describedby="password-error"
                       />
                       <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
