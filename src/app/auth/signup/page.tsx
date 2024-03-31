@@ -1,28 +1,75 @@
 "use client";
 import React, { FormEventHandler } from "react";
 import Link from "next/link";
-import { AuthInterface } from "@/types";
+import { AuthInterface, RegexInterface, RegexError } from "@/types";
+import { EMAIL_REGEX, PASSWORD_REGEX } from "@/utils";
 export default function Page() {
+  /**
+   * a state for form collection specific for auth signup
+   * @param FormData a data that will be sent to the server
+   *   -emaii: the users email address
+   *    -username: the username of the user
+   *  -password: the password of the user
+   */
   const [FormData, setFormData] = React.useState<AuthInterface>({
     email: "",
     password: "",
     username: "",
   });
 
+  const [fullName, setFullname] = React.useState<string>("");
+
+  const [Errormsg, setErrormsg] = React.useState<RegexError>({
+    email: "",
+    password: "",
+  });
+
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-    const newusername: string = value.substring(0, value.indexOf("@"));
+    if (name === "email") {
+      const newusername: string = value.substring(0, value.indexOf("@"));
+      setFullname(newusername);
+    }
 
     setFormData({
       ...FormData,
-      username: newusername,
+      username: fullName,
       [name]: value,
     });
   };
 
-  React.useEffect(()=>{
-    console.log(FormData)
-  }, [FormData])
+  /**
+   * Validates a form input value against a regular expression pattern and updates error messages accordingly.
+   * @param Regexprops An object containing properties for the validation:
+   *                   - fieldname: The name of the input field being validated.
+   *                   - regex: The regular expression pattern used for validation.
+   *                   - value: The value to be validated.
+   *                   - errormessage: The error message to be displayed if the validation fails.
+   * @returns void
+   */
+
+  function SignuValidate(Regexprops: RegexInterface): void {
+    // Check if the value matches the regular expression pattern
+    if (!Regexprops.regex.test(Regexprops.value)) {
+      // If validation fails, update error message for the input field
+      setErrormsg((prevs: RegexError) => ({
+        ...prevs,
+        [Regexprops.fieldname]: Regexprops.errormessage,
+      }));
+    } else {
+      // If validation succeeds, clear error message for the input field
+      setErrormsg((prevs: RegexError) => ({
+        ...prevs,
+        [Regexprops.fieldname]: "",
+      }));
+    }
+  }
+
+  const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
+    event.preventDefault();
+
+    console.log(FormData);
+  };
   return (
     <main className="flex items-center justify-center">
       <section
@@ -48,8 +95,8 @@ export default function Page() {
                 Sign up
               </h1>
               <p className="mt-2 text-sm text-gray-600">
-                Experience A Better Way To Manage Teams today using Efficysync
-                😜.
+                Experience A Better Way To Manage Teams or personal task today
+                using Efficysync 😜.
               </p>
             </div>
             <div className="mt-5">
@@ -87,7 +134,7 @@ export default function Page() {
                 Or
               </div>
               {/* Form */}
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="grid gap-y-4">
                   {/* Form Group */}
                   <div>
@@ -101,10 +148,20 @@ export default function Page() {
                         name="email"
                         className="py-3 px-4 block w-full border-gray-200 border-[1px] rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                         required
-                        onChange={(event: Event | any) =>
-                          handleInputChange(event)
-                        }
-                        aria-describedby="email-error"
+                        onChange={(
+                          event: React.ChangeEvent<HTMLInputElement>
+                        ) => {
+                          handleInputChange(event);
+                          const regexProps: RegexInterface = {
+                            fieldname: "email",
+                            regex: EMAIL_REGEX,
+                            value: event.target.value,
+                            errormessage:
+                              "Please include a valid email address so we can get back to you",
+                          };
+                          SignuValidate(regexProps);
+                        }}
+                        // aria-describedby="email-error"
                       />
                       <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
                         <svg
@@ -119,13 +176,14 @@ export default function Page() {
                         </svg>
                       </div>
                     </div>
-                    <p
-                      className="hidden text-xs text-red-600 mt-2"
-                      id="email-error"
-                    >
-                      Please include a valid email address so we can get back to
-                      you
-                    </p>
+                    {Errormsg.email && FormData.email && (
+                      <p
+                        className=" text-xs text-red-600 mt-2"
+                        id="email-error"
+                      >
+                        {Errormsg.email}
+                      </p>
+                    )}
                   </div>
                   {/* End Form Group */}
                   {/* Form Group */}
@@ -140,10 +198,20 @@ export default function Page() {
                         name="password"
                         className="py-3 px-4 block w-full border-gray-200  border-[1px] rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                         required
-                        onChange={(event: Event | any) =>
-                          handleInputChange(event)
-                        }
-                        aria-describedby="password-error"
+                        onChange={(
+                          event: React.ChangeEvent<HTMLInputElement>
+                        ) => {
+                          handleInputChange(event);
+                          const regexProps: RegexInterface = {
+                            fieldname: "password",
+                            regex: PASSWORD_REGEX,
+                            value: event.target.value,
+                            errormessage:
+                              "8+ characters required",
+                          };
+                          SignuValidate(regexProps);
+                        }}
+                        // aria-describedby="password-error"
                       />
                       <div className="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
                         <svg
@@ -158,12 +226,14 @@ export default function Page() {
                         </svg>
                       </div>
                     </div>
-                    <p
-                      className="hidden text-xs text-red-600 mt-2"
-                      id="password-error"
-                    >
-                      8+ characters required
-                    </p>
+                    {Errormsg.password && FormData.password && (
+                      <p
+                        className=" text-xs text-red-600 mt-2"
+                        id="password-error"
+                      >
+                        {Errormsg.password}
+                      </p>
+                    )}
                   </div>
                   {/* End Form Group */}
                   {/* Form Group */}
